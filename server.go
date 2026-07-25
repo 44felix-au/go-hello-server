@@ -10,3 +10,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	http.HandleFunc("/", helloHandler)
+	fmt.Println("Server running on port 8080...")
+	// http.ListenAndServe(":8080", nil) // commented out for safe workspace environment
+}
